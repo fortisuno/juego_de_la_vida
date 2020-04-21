@@ -1,0 +1,133 @@
+<!--------------------------------------------
+    Programa: Juego de la vida
+    Autor: Gómez Morales Pablo Arturo
+---------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Vida</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="text-center w-100 bg-dark text-light">
+        <div class="container py-5">
+            <div class="row align-content-center">
+                <div class="w-100 mb-3">
+                    <h1 class="display-1">El juego de la Vida</h1>
+                </div>
+                <div class="w-100">
+                    <h3>
+                        <span class="badge badge-pill badge-success font-weight-normal">#JDLV</span>
+                        <span class="badge badge-pill badge-danger font-weight-normal">Programa</span>
+                        <span class="badge badge-pill badge-primary font-weight-normal">AlgoritmosProgramables</span>
+                        <span class="badge badge-pill badge-primary font-weight-normal">3NV40</span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container py-5">
+            <div class="row mb-4">
+                <div class="w-100 text-center">
+                    <h1>¿Qué es el juego de la vida?</h1>
+                </div>
+            </div>
+            <div class="row text-justify">
+                <div class="col">
+                    <p>
+                        El juego de la vida es un autómata celular diseñado por el matemático británico John Horton Conway en 1970. Consiste en observar una simulación donde conviven particulas en un tablero las cuales pueden vivir o morir siguiendo dos simples reglasclear, las cuales son:
+                    </p>
+                    <ol class="w-75 mx-auto">
+                        <li>Si en el turno actual una célula está muerta pero tiene 3 células vivas a su alrededor, entonces aparecerá viva en el turno siguiente.</li>
+                        <li>Si en el turno actual una célula está viva y tiene 2 ó 3 células vivas a su alrededor, entonces seguirá viva, pero si no es así, en el siguiente turno morirá.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row mb-4">
+                <div class="w-100 text-center">
+                    <h1>¿Como jugarlo?</h1>
+                </div>
+            </div>
+            <div class="row text-justify">
+                <div class="col">
+                    <p>
+                        
+                    </p>
+                    <ol class="w-75 mx-auto">
+                        <li>Primero que nada especifica las dimensiones del tablero (tiene que ser un valor entre 5 y 50) y da clic en el boton que dice "Generar tabla".</li>
+                        <li>Una vez que aparezca la tabla da clic en las celdas que quieras para asignar las posiciones iniciales de eljuego.</li>
+                        <li>El juego de la vida no tiene un final, pero... ¿Podrás lograr tener 100 celulas vivas? ¿Cuantas generaciones te tomo alcanzar esa cifra?</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col">
+                    <form>
+                        <div class="form-row justify-content-center">
+                            <div class="col-md-1">
+                                <input type="text" class="form-control" name="valor" placeholder="Valor">
+                            </div>
+                            <button class="btn btn-success ml-5" id="btn-generar">Generar tabla / Detener</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center" id="juego">
+                <div class="col-auto" id="tablero">
+                    <!-- Aqui va el juego -->
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <button class="btn btn-primary" id="btn-iniciar">Iniciar</button>
+                    <button class="btn btn-danger ml-3" id="btn-detener">Detener</button>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <ul class="list-unstyled">
+                        <li><span>Generaciones: </span><span id="generaciones">0</span></li>
+                        <li><span>Vida: </span><span id="vida">0</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <hr>
+    </div>
+    <footer>
+        <div class="container pt-3 pb-5">
+            <div class="row">
+                <div class="col">
+                    <ul class="list-unstyled">
+                        <li><b>Algoritmos Computacionales</b></li>
+                        <li>Secuencia 3NV40</li>
+                        <li>Gómez Morales Pablo Arturo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+</body>
+</html>
