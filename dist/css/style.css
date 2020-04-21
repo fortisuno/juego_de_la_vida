@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    min-height: 580px;
+}
+
+header > .container,
+header > .container > .row {
+    min-height: inherit;
+}
+
+.celula {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.celula-viva {
+    background-color: #111111;
+}
