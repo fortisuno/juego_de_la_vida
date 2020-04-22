@@ -69,7 +69,15 @@ $(document).ready(function() {
         console.log('Configurando tablero...');
         configurar_tablero(celulas);
         console.log('Iniciando simulación...');
-        ciclo = setInterval(function(){bucle();},1000/5);
+        ciclo = setInterval(function() {
+
+            if(via != 0) {
+                bucle();
+            } else{
+                clearInterval(ciclo);
+            }
+        
+        },1000/5);
 
         $(this).attr('disabled', true);
         $('#btn-detener').attr('disabled', false);
@@ -78,7 +86,7 @@ $(document).ready(function() {
     //Boton que para el juego
     $('#btn-detener').on('click', function(e) {
         clearInterval(ciclo);
-        
+
         $(this).attr('disabled', true);
         $('#btn-generar').attr('disabled', false);
     });
