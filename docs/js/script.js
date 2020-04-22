@@ -71,7 +71,7 @@ $(document).ready(function() {
         console.log('Iniciando simulación...');
         ciclo = setInterval(function() {
 
-            if(via != 0) {
+            if(vida != 0) {
                 bucle();
             } else{
                 detener_juego();
