@@ -77,6 +77,7 @@ $(document).ready(function() {
     //Boton que para el juego
     $('#btn-detener').on('click', function(e) {
         clearInterval(ciclo);
+        $(this).attr('disabled', true);
         $('#btn-generar').attr('disabled', false);
     });
 
