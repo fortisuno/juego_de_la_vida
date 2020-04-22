@@ -74,7 +74,7 @@ $(document).ready(function() {
             if(via != 0) {
                 bucle();
             } else{
-                clearInterval(ciclo);
+                detener_juego();
             }
         
         },1000/5);
@@ -85,14 +85,18 @@ $(document).ready(function() {
 
     //Boton que para el juego
     $('#btn-detener').on('click', function(e) {
-        clearInterval(ciclo);
-
-        $(this).attr('disabled', true);
-        $('#btn-generar').attr('disabled', false);
+        detener_juego();
     });
 
 
 });
+
+function detener_juego() {
+    clearInterval(ciclo);
+
+    $('#btn-detener').attr('disabled', true);
+    $('#btn-generar').attr('disabled', false);
+}
 
 
 //Propiedades de la celula y sus metodos
