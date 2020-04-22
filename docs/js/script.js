@@ -5,7 +5,7 @@
 
 //parametros del juego
 var celulas;
-var vida;
+var vida = 1;
 var generaciones;
 var ciclo;
 
