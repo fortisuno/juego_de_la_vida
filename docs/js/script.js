@@ -51,6 +51,7 @@ $(document).ready(function() {
                     $(this).attr('data-estado', estado);
                 }
             });
+            $('#btn-iniciar').attr('disabled', false);
         } else {
             alert("Introduce un valor entero entre 5 y 50");
         }
@@ -67,12 +68,16 @@ $(document).ready(function() {
         configurar_tablero(celulas);
         console.log('Iniciando simulación...');
         ciclo = setInterval(function(){bucle();},1000/5);
+
+        $(this).attr('disabled', true);
+        $('#btn-generar').attr('disabled', true);
+        $('#btn-detener').attr('disabled', false);
     });
 
     //Boton que para el juego
     $('#btn-detener').on('click', function(e) {
         clearInterval(ciclo);
-
+        $('#btn-generar').attr('disabled', false);
     });
 
 
